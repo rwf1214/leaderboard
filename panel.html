@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<style>
+body {
+	margin: 0;
+}
+html {
+	font-family: Roboto,sans-serif;
+	font-weight: 400;
+}
+button, input {
+	overflow: visible;
+}
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+button, input, optgroup, select, textarea {
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+img {
+	border-style: none;
+}
+body {
+	margin: 0 auto;
+	font-size: 12px;
+}
+html {
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+.lb {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow: auto;
+	background-color: #fff;
+}
+.lb.night {
+	background-color: #09161d;
+}
+.lb__nav-bot, .lb__nav-top {
+	position: fixed;
+	z-index: 2;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.lb__nav-top {
+	height: 42px;
+	text-transform: uppercase;
+	transition: all .3s ease-in-out;
+	z-index: 3;
+}
+.flex {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: calc(-40px + 100vh);
+}
+.lb__nav-bot {
+	bottom: 0px;
+	height: 32px;
+	text-transform: uppercase;
+	line-height: 32px;
+	background-color: #fff;
+}
+.lb.night .lb__nav-bot {
+	background-color: #09161d;
+}
+[type=checkbox], [type=radio] {
+	box-sizing: border-box;
+	padding: 0;
+}
+.lb__nav-bot input, .lb__nav-top input {
+	display: none;
+}
+.lb__nav-bot label, .lb__nav-top label {
+	margin-right: 10px;
+	margin-left: 10px;
+	letter-spacing: 1px;
+}
+.lb__nav-bot label {
+	height: 100%;
+	font-weight: 400;
+	color: #91979a;
+}
+.lb__nav-top label {
+	font-weight: 300;
+	color: hsla(0, 0%, 100%, 0.8);
+	text-shadow: 0px 1px 4px rgba(0,0,0,0.35);
+}
+.lb__nav-bot label:hover, .lb__nav-top label:hover {
+	cursor: pointer;
+}
+.lb.night .lb__nav-bot label {
+	font-weight: 300;
+	color: #bdc2c4;
+}
+.lb__nav-bot input[type=radio]:checked + label {
+	border-bottom: 2px solid #bdc2c4;
+	font-weight: 500;
+	color: #09161d;
+}
+.lb.night .lb__nav-bot input[type=radio]:checked + label {
+	border-bottom-color: #4f5e65;
+	font-weight: 400;
+	color: #fff;
+}
+.placeholder-wrapper {
+	margin: 0 auto;
+	width: 50%;
+}
+.placeholder-wrapper img {
+	width: 100%;
+}
+.lb__nav-top input[type=radio]:checked + label {
+	font-weight: 400;
+	color: #fff;
+}
+.lb__nav-top input[type=radio]:disabled + label {
+	display: none;
+}
+</style>
+</head>
+<body>
+    <div class="lb night"><div class="lb__nav-top">
+      <input name="type" id="loyaltyOption" type="radio" value="loyalty">
+       <label class="lb__nav-top-label" for="loyaltyOption">Ramcoins</label>
+      <input name="type" id="loyaltyOption" type="radio" value="GSubs">
+       <label class="lb__nav-top-label" for="loyaltyOption">Giftet Subs</label>
+        <input name="type" id="loyaltyOption" id="bitsOption" type="radio" value="bits">
+         <label class="lb__nav-top-label" for="bitsOption">Bits</label> 
+         <input name="type" id="subsOption" type="radio" value="subs">
+          <label class="lb__nav-top-label" for="subsOption">Subs</label>
+        </div> 
+        <div class="flex"><div class="placeholder-wrapper"><img alt="" src="images/night-donation-placeholder.gif?id=68d51289"> 
+          <!----></div>
+        </div> 
+        <div class="lb__nav-bot hideFadeAll"><input name="period" id="sessionOption" type="radio" value="session">
+           <label for="sessionOption">SESSION</label>
+            <input name="period" id="weekOption" type="radio" value="week">
+             <label for="weekOption">WEEK</label> 
+             <input name="period" id="monthOption" type="radio" value="month">
+              <label for="monthOption">MONTH</label>
+               <input name="period" id="allTimeOption" type="radio" value="all">
+                <label for="allTimeOption">ALL-TIME</label>
+              </div>
+            </div>
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+<script src="js/vendor.js?id=0cdc66d7" type="text/javascript"></script><script src="js/viewer.js?id=0cdc66d7" type="text/javascript"></script>
+
+</body>
+</html>
